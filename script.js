@@ -1,30 +1,24 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const contactForm = document.getElementById('contact-form');
-    const successMessage = document.getElementById('success-message');
-  
-    // Handle form submission
-    contactForm.addEventListener('submit', function (event) {
-      event.preventDefault();
-      const formData = new FormData(contactForm);
-  
-      // Send form data using Fetch API
-      fetch('/contact', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          // Show success message and reset form
-          successMessage.style.display = 'block';
-          contactForm.reset();
-        } else {
-          console.error('Error occurred while sending message.');
-        }
-      })
-      .catch(error => {
-        console.error('Error occurred while sending message:', error);
-      });
-    });
-  });
-  
+const axios = require('axios');
+
+// Handle form submission
+const handleFormSubmit = async () => {
+  const formData = new FormData();
+  formData.append('name', 'John');
+  formData.append('email', 'john@example.com');
+  formData.append('message', 'Hello, World!');
+
+  try {
+    const response = await axios.post('http://localhost:8000/contact', formData);
+    const data = response.data;
+    if (data.success) {
+      console.log('Message sent successfully!');
+    } else {
+      console.error('Error occurred while sending message.');
+    }
+  } catch (error) {
+    console.error('Error occurred while sending message:', error);
+  }
+};
+
+// Call the form submission function
+handleFormSubmit();
