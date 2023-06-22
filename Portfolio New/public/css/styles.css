@@ -1,0 +1,75 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.navbar {
+  background-color: #343a40;
+}
+
+#hero {
+  background-color: #343a40;
+  color: #fff;
+  padding: 150px 0;
+  border-radius: 0;
+}
+
+#about {
+  background-color: #fff;
+  padding: 100px 0;
+}
+
+.profile-pic {
+  border: 10px solid #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+#projects {
+  padding: 100px 0;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.card {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+#contact {
+  padding: 100px 0;
+}
+
+.footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+  margin-right: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+}
+
+
+/* Media query for screens with width up to 767px */
+
+
+/* Enlarge items on screens with width 390px and height 844px */
+
