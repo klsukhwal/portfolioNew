@@ -5,26 +5,26 @@ const fs = require('fs');
 const bodyParser = require('body-parser');
 
 // Serve static files from the "public" directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '')));
 
 // Parse URL-encoded bodies (for form data)
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Define routes for the About, Projects, and Contact sections
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/index.html'));
+  res.sendFile(path.join(__dirname, '/index.html'));
 });
 
 app.get('/about', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/about.html'));
+  res.sendFile(path.join(__dirname, '/about.html'));
 });
 
 app.get('/projects', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/projects.html'));
+  res.sendFile(path.join(__dirname, '/projects.html'));
 });
 
 app.get('/contact', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/contact.html'));
+  res.sendFile(path.join(__dirname, '/contact.html'));
 });
 
 app.post('/contact', (req, res) => {
@@ -44,7 +44,7 @@ app.post('/contact', (req, res) => {
 });
 
 app.get('/thankyou', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/thankyou.html'));
+  res.sendFile(path.join(__dirname, '/thankyou.html'));
 });
 
 // Start the server
