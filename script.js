@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from 'axios';
 
 // Handle form submission
 const handleFormSubmit = async () => {
