@@ -1,30 +1,36 @@
-const express = require('express');
+import express from 'express';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+import fs from 'fs';
+import bodyParser from 'body-parser';
+
 const app = express();
-const path = require('path');
-const fs = require('fs');
-const bodyParser = require('body-parser');
+
+// Get the directory name of the current module
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Serve static files from the "public" directory
-app.use(express.static(path.join(__dirname, '')));
+app.use(express.static(join(__dirname, '')));
 
 // Parse URL-encoded bodies (for form data)
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Define routes for the About, Projects, and Contact sections
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '/index.html'));
+  res.sendFile(join(__dirname, '/index.html'));
 });
 
 app.get('/about', (req, res) => {
-  res.sendFile(path.join(__dirname, '/about.html'));
+  res.sendFile(join(__dirname, '/about.html'));
 });
 
 app.get('/projects', (req, res) => {
-  res.sendFile(path.join(__dirname, '/projects.html'));
+  res.sendFile(join(__dirname, '/projects.html'));
 });
 
 app.get('/contact', (req, res) => {
-  res.sendFile(path.join(__dirname, '/contact.html'));
+  res.sendFile(join(__dirname, '/contact.html'));
 });
 
 app.post('/contact', (req, res) => {
@@ -44,7 +50,7 @@ app.post('/contact', (req, res) => {
 });
 
 app.get('/thankyou', (req, res) => {
-  res.sendFile(path.join(__dirname, '/thankyou.html'));
+  res.sendFile(join(__dirname, '/thankyou.html'));
 });
 
 // Start the server
