@@ -1,14 +1,20 @@
-import axios from 'axios';
+const axios = require('axios');
+const querystring = require('querystring');
 
 // Handle form submission
 const handleFormSubmit = async () => {
-  const formData = new FormData();
-  formData.append('name', 'John');
-  formData.append('email', 'john@example.com');
-  formData.append('message', 'Hello, World!');
+  const formData = {
+    name: 'John',
+    email: 'john@example.com',
+    message: 'Hello, World!',
+  };
 
   try {
-    const response = await axios.post('http://localhost:8000/contact', formData);
+    const response = await axios.post('http://localhost:8000/contact', querystring.stringify(formData), {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+    });
     const data = response.data;
     if (data.success) {
       console.log('Message sent successfully!');
