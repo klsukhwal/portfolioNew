@@ -3,24 +3,25 @@
 
 <head>
   <title>My Portfolio</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <style>
-   
-  </style>
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="#">My Portfolio</a>
+      <a class="navbar-brand" href="/">
+        <img src="img/logo.png" alt="Logo" class="logo">
+        Kishan's Portfolio
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
+        <div class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="/about">About</a>
           </li>
@@ -30,45 +31,92 @@
           <li class="nav-item">
             <a class="nav-link" href="/contact">Contact</a>
           </li>
-        </ul>
+        </div>
       </div>
     </nav>
   </header>
-
-  <section id="hero" class="jumbotron text-center">
+  
+  
+  <section id="hero" class=" hero">
     <div class="container">
-      <h1 class="display-4">Welcome to My Portfolio!</h1>
-      <p class="lead">I'm a passionate developer.</p>
-    </div>
-  </section>
-
-  <section id="about" class="container py-5">
-    <div class="row">
-      <div class="col-md-6 d-flex align-items-center">
-        <img src="img/Passport_Photograph.png" alt="About Me" class="profile-pic img-fluid rounded-circle mx-auto d-block" style="max-width: 300px;">
-      </div>
-      <div class="col-md-6 d-flex align-items-center">
-        <div class="text-center text-md-left">
-          <h2 class="font-weight-bold mb-4">About Me</h2>
-          <h3 class="text-primary mb-3">Passionate Developer</h3>
-          <p class="lead">Hi there! I'm Kishan Sukhwal, a dedicated and passionate web developer with expertise in HTML,
-            CSS, and JavaScript. I love building stunning and interactive websites that deliver an exceptional user
-            experience.</p>
-          <p class="text-muted">With a strong foundation in front-end development, I strive to create visually appealing
-            and user-friendly interfaces. I continuously expand my skills to stay up-to-date with the latest web
-            technologies and trends.</p>
-          <p class="text-muted">My goal is to bring ideas to life through clean and efficient code. I enjoy working
-            collaboratively and have excellent problem-solving abilities to overcome any challenges that come my way.</p>
-          <p class="text-muted">When I'm not coding, you can find me exploring new technologies, attending tech meetups,
-            and staying updated with industry developments. I'm excited about the future of web development and the endless
-            possibilities it offers.</p>
-        </div>
-      </div>
+      <h1 class="display-4 bordered-text">Welcome to My Portfolio!</h1>
+      <p class="lead animation-container ">
+        <span class="animation bordered-text"></span>
+      </p>
     </div>
   </section>
   
+
+  
+  <section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+    
+    <div class="row">
+
+    <div class="image">
+        <img draggable="false" class="tilt" src="img/Passport_Photograph.png" alt="">
+    </div>
+    <div class="content">
+        <h3>I'm Kishan</h3>
+        <span class="tag">Full Stack Developer</span>
+        
+        <p>I am a Full-Stack developer based in Bengaluru, India. 
+          I am an graduate from Ramaiah Institute of Technology.
+          I am very passionate about improving my coding skills & developing applications & websites.
+          I build WebApps and Websites.
+          Working for myself to improve my skills.
+          Love to build Full-Stack. </p>
+        
+        <div class="box-container">
+            <div class="box">
+              <p><span> Phone : </span> +91 9587206196</p>
+            </div> 
+            <div class="box">
+              <p><span> Email : </span> ksukhwal30@gmail.com</p>
+            </div>
+        </div>
+        
+        <div class="resumebtn">
+            <a href="https://drive.google.com/file/d/12bjBG77Y5dk8Sr2Sa0lCy2DR6Svg4ZZ4/view?usp=sharing" target="_blank" class="btn"><span>Resume</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+
+    </div>
+    </div>
+</section>
+
+
+
+<section id="experience" class="container py-5">
+  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
+  <ul class="timeline">
+    <li style="--accent-color:#E24A68">
+      <div class="date">2020</div>
+      <div class="title">NPCIL Intern</div>
+      <div class="descr">Received 2 months long practical commissioning training for 220 MW capacity of a nuclear power plant. Successfully learned the operation and protection system of a Pressurized Heavy Water Reactor(PHWR)
+        Led the team to learn for project practical tasks.</div>
+    </li>
+    <li style="--accent-color:#41516C">
+      <div class="date">2021</div>
+      <div class="title">Software Development Intern ,Inventeron Technologies and Business Solutions LLP </div>
+      <div class="descr">Developed and deployed a responsive web application using HTML, CSS, and JavaScript, enabling seamless user interactions and enhancing
+        the overall user experience. Conducted thorough testing and debugging, identifying and resolving issues to deliver high‑quality, reliable software solutions.</div>
+    </li>
+    <li style="--accent-color:#FBCA3E">
+      <div class="date">2022</div>
+      <div class="title">Software Engineer Intern, Cognizant</div>
+      <div class="descr">Full‑Stack Web Application Development: Led end‑to‑end development of a sophisticated e‑commerce platform. Utilized HTML, CSS,
+        JavaScript, React.js for front‑end development, and Node.js, Express.js, MongoDB for back‑end development. Achieved a 20 percent increase
+        in conversion rates and received recognition for seamless user experience and robust functionality.</div>
+    </li>
+  </ul>
+</section>
+
+
+
   <section id="projects" class="container py-5">
-    <h2 class="text-center mb-5">Projects</h2>
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
     <div class="row">
       <div class="col-md-6" onclick="window.open('https://klsukhwal.github.io/booking/', '_blank');">
         <div class="card mb-3">
@@ -94,11 +142,6 @@
       </div>
     </div>
   </section>
-  
-  
-  
-  
-  
 
   <footer class="bg-dark text-white text-center py-3">
     <p>Connect with me</p>
@@ -109,18 +152,59 @@
         class="mr-3"><i class="fab fa-twitter fa-lg"></i></a>
       <a href="https://instagram.com/klsukhwal?igshid=MmIzYWVlNDQ5Yg==" target="_blank" rel="noopener noreferrer"><i
           class="fab fa-instagram fa-lg"></i></a>
-      <a href="https://github.com/YourGitHubUsername" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-lg"></i></a>
+      <a href="https://github.com/klsukhwal" target="_blank" rel="noopener noreferrer"><i class="fab fa-github fa-lg"></i></a>
     </div>
     <p class="mt-3">&copy; 2023 My Portfolio. All rights reserved.</p>
   </footer>
-  
-  
-  
 
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="script.js"></script> 
+  
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
+ <script>
+  // JavaScript effects
+  const aboutSection = document.querySelector("#about");
+
+  // Add animation class when aboutSection comes into view
+  window.addEventListener("scroll", function () {
+    const scrollPosition = window.scrollY;
+    const aboutSectionPosition = aboutSection.offsetTop;
+
+    if (scrollPosition >= aboutSectionPosition - window.innerHeight / 2) {
+      aboutSection.classList.add("animate");
+    }
+  });
+</script>
+<script>
+  const words = ["I'm a Developer", "I'm a Designer", "I'm a Problem Solver"];
+let wordIndex = 0;
+let letterIndex = 0;
+let currentWord = "";
+let currentLetter = "";
+
+(function typingAnimation() {
+  if (wordIndex === words.length) {
+    wordIndex = 0;
+  }
+  currentWord = words[wordIndex];
+  const constantPart = "I'm a ";
+  const appendedWord = currentWord.slice(constantPart.length);
+
+  currentLetter = constantPart + appendedWord.slice(0, ++letterIndex);
+
+  document.querySelector(".animation").textContent = currentLetter;
+  if (currentLetter.length === currentWord.length) {
+    wordIndex++;
+    letterIndex = 0;
+    setTimeout(typingAnimation, 2000); // Increase the delay to 2 seconds (2000 milliseconds)
+  } else {
+    setTimeout(typingAnimation, 100); // Keep the delay between letters as 100 milliseconds
+  }
+})();
+</script>
 </body>
 
 </html>

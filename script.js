@@ -1,7 +1,5 @@
-const axios = require('axios');
-const querystring = require('querystring');
-
 // Handle form submission
+
 const handleFormSubmit = async () => {
   const formData = {
     name: 'John',
