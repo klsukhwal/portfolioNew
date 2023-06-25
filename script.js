@@ -1,4 +1,3 @@
-// Handle form submission
 
 const handleFormSubmit = async () => {
   const formData = {
@@ -24,5 +23,4 @@ const handleFormSubmit = async () => {
   }
 };
 
-// Call the form submission function
 handleFormSubmit();

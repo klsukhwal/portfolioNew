@@ -175,10 +175,9 @@
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   
  <script>
-  // JavaScript effects
   const aboutSection = document.querySelector("#about");
 
-  // Add animation class when aboutSection comes into view
+  
   window.addEventListener("scroll", function () {
     const scrollPosition = window.scrollY;
     const aboutSectionPosition = aboutSection.offsetTop;
@@ -209,9 +208,9 @@ let currentLetter = "";
   if (currentLetter.length === currentWord.length) {
     wordIndex++;
     letterIndex = 0;
-    setTimeout(typingAnimation, 2000); // Increase the delay to 2 seconds (2000 milliseconds)
+    setTimeout(typingAnimation, 2000); 
   } else {
-    setTimeout(typingAnimation, 100); // Keep the delay between letters as 100 milliseconds
+    setTimeout(typingAnimation, 100); 
   }
 })();
 </script>
